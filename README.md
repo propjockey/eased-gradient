@@ -13,3 +13,6 @@
 ```
 
 See `demo.html` and `test/eased-gradient.js` for example code use.
+
+![image](https://user-images.githubusercontent.com/7545075/54923654-afbfdd00-4ed8-11e9-8fd7-e98500e331c3.png)
+![image](https://user-images.githubusercontent.com/7545075/54923701-c7976100-4ed8-11e9-8009-6aa582141b44.png)

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <title>eased-gradient by PropJockey</title>
+    <script src="../node_modules/steal/steal.js">
+      import easedGradient from "src/eased-gradient"
+
+      const previewData = [
+        {
+          draw: "45deg",
+          stops: { "0%": "#ff0000", "100%": "#0000ff" },
+        },
+        {
+          draw: "45deg",
+          stops: { "0%": "#ff0000", "100%": "#0000ff" },
+          ease: ["factory.steps", 8, "jump-end"],
+          freq: 0.067
+        },
+        {
+          draw: "45deg",
+          stops: { "0%": "#ff0000", "100%": "#0000ff" },
+          ease: ["factory.cubic-bezier", 0.5, 1, 0.5, 0],
+          freq: 0.067
+        },
+        {
+          draw: "to top",
+          stops: { "0": "#ff00ff", "50%": "#8822cc", "66%": "#ff00ff", "100%": "#4488ff" },
+          ease: "ease.linear",
+          freq: 1 / 20
+        },
+        {
+          draw: "to top",
+          stops: { "0": "#ff00ff", "50%": "#8822cc", "66%": "#ff00ff", "100%": "#4488ff" },
+          ease: ["factory.steps", 6, "jump-start"],
+          freq: 1 / 20
+        },
+        {
+          draw: "to top",
+          stops: { "0": "#ff00ff", "50%": "#8822cc", "66%": "#ff00ff", "100%": "#4488ff" },
+          ease: ["factory.steps", 6, "jump-end"],
+          freq: 1 / 20
+        },
+        {
+          draw: "0.25turn",
+          stops: { "0": "#3f87a6", "50%": "#ebf8e1", "100%": "#f69d3c" },
+          ease: "ease.linear"
+        },
+        {
+          draw: "0.25turn",
+          stops: { "0": "#3f87a6", "50%": "#ebf8e1", "100%": "#f69d3c" },
+          ease: "ease.in-out-back"
+        },
+        {
+          draw: "0.25turn",
+          stops: { "0": "#3f87a6", "50%": "#ebf8e1", "100%": "#f69d3c" },
+          ease: ["factory.cubic-bezier", 0, 0, 0.2, 1]
+        },
+        {
+          draw: "circle at center",
+          stops: { "0%": "#ff0000", "100%": "#0000ff" },
+        },
+        {
+          draw: "circle at center",
+          stops: { "0%": "#ff0000", "100%": "#0000ff" },
+          ease: ["factory.steps", 8, "jump-end"],
+          freq: 0.067
+        },
+        {
+          draw: "circle at center",
+          stops: { "0%": "#ff0000", "100%": "#0000ff" },
+          ease: ["factory.cubic-bezier", 0.5, 1, 0.5, 0],
+          freq: 0.067
+        }
+      ]
+      const previews = document.querySelectorAll(".preview")
+
+      for (let i = 0; i < previews.length; i++) {
+        const data = previewData[i]
+        if (!data) {
+          break;
+        }
+        const pv = previews[i]
+        pv.style.backgroundImage = easedGradient(data)
+        pv.innerHTML = "easedGradient(" + JSON.stringify(data, null, 2) + ")"
+      }
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Helvetica Neue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        font-weight: 300;
+      }
+      .grid {
+        display: inline-grid;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        grid-template-columns: 300px 300px 300px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+      .preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="preview"></div>
+      <div class="preview"></div>
+      <div class="preview"></div>
+
+      <div class="preview"></div>
+      <div class="preview"></div>
+      <div class="preview"></div>
+
+      <div class="preview"></div>
+      <div class="preview"></div>
+      <div class="preview"></div>
+
+      <div class="preview"></div>
+      <div class="preview"></div>
+      <div class="preview"></div>
+    </div>
+  </body>
+</html>

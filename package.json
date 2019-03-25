@@ -1,0 +1,45 @@
+{
+  "name": "eased-gradient",
+  "version": "0.0.1",
+  "author": "James0x57",
+  "description": "PropJokey eased-gradient - generate CSS for a linear or radial gradient with an ease applied to the spectrum",
+  "license": "BSD-2-Clause",
+  "homepage": "https://propjockey.xyz",
+  "keywords": [
+    "radial-gradient",
+    "linear-gradient",
+    "color ease",
+    "propjockey"
+  ],
+  "main": "dist/cjs/eased-gradient",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test --stack",
+    "prepublish": "./node_modules/.bin/grunt build"
+  },
+  "steal": {
+    "main": "src/eased-gradient",
+    "npmIgnore": [
+      "testee"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/propjockey/eased-gradient"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.3.2",
+    "grunt-eslint": "^21.0.0",
+    "grunt-steal": "^2.0.0",
+    "grunt-testee": "^1.1.0",
+    "steal": "^2.1.14",
+    "steal-qunit": "^1.0.2",
+    "steal-tools": "^2.0.11"
+  },
+  "dependencies": {
+    "propgun": "0.0.1"
+  }
+}

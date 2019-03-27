@@ -1,6 +1,6 @@
 {
   "name": "eased-gradient",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "James0x57",
   "description": "PropJokey eased-gradient - generate CSS for a linear or radial gradient with an ease applied to the spectrum",
   "license": "BSD-2-Clause",
@@ -40,6 +40,6 @@
     "steal-tools": "^2.0.11"
   },
   "dependencies": {
-    "propgun": "0.0.1"
+    "propgun": "0.0.2"
   }
 }

@@ -18,9 +18,9 @@ const easedGradient = function (props, rawData) {
   const values = []
   const ease = props.ease || "ease.linear"
   for (let i = 0; i < 1; i += freq) {
-    values.push(gradientpropgun(i, ease))
+    values.push(gradientpropgun.pew(i, ease))
   }
-  values.push(gradientpropgun(1, ease))
+  values.push(gradientpropgun.pew(1, ease))
 
   gradientpropgun.destroy()
 

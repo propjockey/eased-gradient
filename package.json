@@ -2,7 +2,7 @@
   "name": "eased-gradient",
   "version": "0.0.2",
   "author": "James0x57",
-  "description": "PropJokey eased-gradient - generate CSS for a linear or radial gradient with an ease applied to the spectrum",
+  "description": "PropJockey eased-gradient - generate CSS for a linear or radial gradient with an ease applied to the spectrum",
   "license": "BSD-2-Clause",
   "homepage": "https://propjockey.xyz",
   "keywords": [
